@@ -25,3 +25,4 @@ Route::post('/todos/{id}/update', 'TodoController@update')->name('todos.update')
 Route::get('/todos/toggle_all', 'TodoController@toggle_all');
 Route::get('/todos/delete_completed','TodoController@delete_completed');
 Route::get('/todos/delete_all', 'TodoController@delete_all');
+Route::post('/todos/create', 'TodoController@create');

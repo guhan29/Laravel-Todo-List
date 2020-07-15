@@ -11,3 +11,16 @@ ul li p {
 ul li .buttons {
 	float: right;
 }
+
+.bottom-btn {
+	padding: 1rem 1rem;
+}
+
+.outline{
+	border: solid 1px #17a2b8;
+}
+
+.outline:focus {
+	border-color: rgb(40, 167, 69);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(40, 167, 69, 0.55);
+}

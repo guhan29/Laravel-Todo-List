@@ -2,6 +2,10 @@
 
 @section('content')
 	<h1 class="text-center mb-5">Todo List</h1>
+	<form action="/todos/create" method="post">
+		@csrf
+		<input type="text" class="form-control form-control-lg mb-4 outline" name="todo_text" placeholder="Enter your todo here" required>
+	</form>
 	@if(count($todos) != 0)
 		<ul class="list-group">
 			@foreach($todos as $todo)
@@ -21,9 +25,11 @@
 			@endforeach
 		</ul>
 		<div class="bottom-btn">
-			<a href="/todos/toggle_all" class="btn btn-success">Toggle All</a>
-			<a href="/todos/delete_completed" class="btn btn-warning">Delete Completed</a>
-			<a href="/todos/delete_all" class="btn btn-danger">Delete All</a>
+			<center>
+				<a href="/todos/toggle_all" class="btn btn-success">Toggle All</a>
+				<a href="/todos/delete_completed" class="btn btn-warning">Delete Completed</a>
+				<a href="/todos/delete_all" class="btn btn-danger">Delete All</a>
+			</center>
 		</div>
 	@else
 		<center><span class="alert alert-info">Your todo list is empty</span></center>

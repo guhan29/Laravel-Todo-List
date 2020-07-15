@@ -60,4 +60,11 @@ class TodoController extends Controller
     	}
     	return redirect('/todos');
     }
+
+    public function create() {
+    	$todo = new Todo();
+    	$todo->todo_text = request('todo_text');
+    	$todo->save();
+    	return redirect('/todos');
+    }
 }
