@@ -1,0 +1,13 @@
+.container h1 {
+	clear: left;
+}
+
+ul li p {
+	float: left;
+	font-family: cursive;
+	font-size: 20px;
+}
+
+ul li .buttons {
+	float: right;
+}

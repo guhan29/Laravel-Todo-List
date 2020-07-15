@@ -18,4 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/todos', 'TodoController@index');
-Route::get('/edit', 'TodoController@edit');
+Route::get('/todos/{id}/edit', 'TodoController@edit');
+Route::get('/todos/{id}/delete', 'TodoController@delete');
+Route::get('/todos/{id}/toggle', 'TodoController@toggle');
+Route::post('/todos/{id}/update', 'TodoController@update')->name('todos.update');
+Route::get('/todos/toggle_all', 'TodoController@toggle_all');
+Route::get('/todos/delete_completed','TodoController@delete_completed');
+Route::get('/todos/delete_all', 'TodoController@delete_all');
