@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
-
+*/
+Route::get('/', 'TodoController@index')->name('todos.index');
 Route::get('/todos', 'TodoController@index');
 Route::get('/todos/{id}/edit', 'TodoController@edit');
 Route::get('/todos/{id}/delete', 'TodoController@delete');
